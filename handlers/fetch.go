@@ -14,7 +14,7 @@ func SimulatedService(name string, delay time.Duration, ch chan<- string) {
 }
 
 func Welcome(c *gin.Context) {
-	c.JSON(200, gin.H{"message": "Welcome to the Concurrnt API! Use /concurrent endpoint."})
+	c.JSON(200, gin.H{"message": "Welcome to the Concurrnt API! Use /concurrent endpoint. Be Happy with Great skill"})
 }
 
 func ConcurrentFetch(c *gin.Context) {

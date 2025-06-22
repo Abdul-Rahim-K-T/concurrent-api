@@ -8,7 +8,7 @@ import (
 
 func main() {
 	r := gin.Default()
-
+	r.GET("/", handlers.Welcome)
 	r.GET("/concurrent", handlers.ConcurrentFetch)
 
 	r.Run(":8080") // http://localhost:8080/concurrent

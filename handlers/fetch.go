@@ -13,6 +13,10 @@ func SimulatedService(name string, delay time.Duration, ch chan<- string) {
 	ch <- fmt.Sprintf("%s finished after %v", name, delay)
 }
 
+func Welcome(c *gin.Context) {
+	c.JSON(200, gin.H{"message": "Welcome to the Concurrnt API! Use /concurrent endpoint."})
+}
+
 func ConcurrentFetch(c *gin.Context) {
 	ch1 := make(chan string)
 	ch2 := make(chan string)
